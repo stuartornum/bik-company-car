@@ -1,0 +1,62 @@
+<!doctype html>
+<HTML>
+<HEAD>
+<TITLE>BIK Calculator</TITLE>
+</HEAD>
+<BODY>
+<form action="/" method="POST">
+<table>
+    <tr>
+        <td>P11D value</td>
+        <td><input type="text" name="p11d" placeholder="49950"></td>
+    </tr>
+    <tr>
+        <td>CO2 Emissions</td>
+        <td><input type="text" name="co2" placeholder="145"></td>
+    </tr>
+    <tr>
+        <td>Fuel</td>
+        <td><select name="fuel">
+            <option value="diesel">Diesel</option>
+            <option value="petrol">Petrol</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Your tax band</td>
+        <td><select name="tax">
+            <option value="0.20">20%</option>
+            <option value="0.40">40%</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit"></td>
+    </tr>
+</table>
+</form>
+
+<br><br>
+
+<table>
+    <tr>
+        <td>P11D</td>
+        <td>£{{data.p11d}}</td>
+    </tr>
+    <tr>
+        <td>BIK</td>
+        <td>£{{data.bik}}</td>
+    </tr>
+    <tr>
+        <td>CO2 Tax Band</td>
+        <td>{{data.bik_pc}}%</td>
+    </tr>
+    <tr>
+        <td>Tax at {{data.tax}}%</td>
+        <td>{{data.tax_cost}}</td>
+    </tr>
+</table>
+
+</BODY>
+</HTML>
